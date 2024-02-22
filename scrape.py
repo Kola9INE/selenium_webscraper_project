@@ -25,7 +25,7 @@ EMAIL_ADDRESS = []
 PHYSICAL_ADDRESS = []
 
 # Loading site URL
-driver.get('https://www.lee-associates.com/')
+driver.get('#################')
 driver.maximize_window()
 
 # Automating to click "Person"
@@ -59,7 +59,7 @@ while x < 36:
     for ids in broker_ID:
         ATTRS.append(ids.get_attribute('id'))
 
-    # Iteration for the brokers on web page
+    # Iteration for the items on web page
     i = 0
     while i < len(ATTRS):
 
@@ -95,7 +95,7 @@ while x < 36:
 
         # Increment to monitor while loop
         i+=1
-
+        
         if i >= len(ATTRS):
             pass
         else:
@@ -130,11 +130,12 @@ while x < 36:
 
 
     driver.execute_script("window.scrollTo(0, 0);")
+    
     # Increment to change office.
     x+=1
     time.sleep(2)
 
-    # Creating dataframe
+# Creating dataframe
 data = {"Name": NAME,
         "Phone_Number": PHONE_NUMBER,
         "Email": EMAIL_ADDRESS,
